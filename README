@@ -1,0 +1,11 @@
+Do:
+cmake ..
+make
+cd build
+
+./pr2 -u
+./pr2 --user
+./pr2 -p
+./pr2 --proces
+./pr2 -l output.log -u
+

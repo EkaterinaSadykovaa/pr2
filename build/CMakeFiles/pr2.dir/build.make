@@ -69,19 +69,19 @@ include CMakeFiles/pr2.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/pr2.dir/flags.make
 
-CMakeFiles/pr2.dir/main.c.o: CMakeFiles/pr2.dir/flags.make
-CMakeFiles/pr2.dir/main.c.o: /home/katia/2sem/pr2/main.c
-CMakeFiles/pr2.dir/main.c.o: CMakeFiles/pr2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/katia/2sem/pr2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/pr2.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pr2.dir/main.c.o -MF CMakeFiles/pr2.dir/main.c.o.d -o CMakeFiles/pr2.dir/main.c.o -c /home/katia/2sem/pr2/main.c
+CMakeFiles/pr2.dir/main2.c.o: CMakeFiles/pr2.dir/flags.make
+CMakeFiles/pr2.dir/main2.c.o: /home/katia/2sem/pr2/main2.c
+CMakeFiles/pr2.dir/main2.c.o: CMakeFiles/pr2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/katia/2sem/pr2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/pr2.dir/main2.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pr2.dir/main2.c.o -MF CMakeFiles/pr2.dir/main2.c.o.d -o CMakeFiles/pr2.dir/main2.c.o -c /home/katia/2sem/pr2/main2.c
 
-CMakeFiles/pr2.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/pr2.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/katia/2sem/pr2/main.c > CMakeFiles/pr2.dir/main.c.i
+CMakeFiles/pr2.dir/main2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/pr2.dir/main2.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/katia/2sem/pr2/main2.c > CMakeFiles/pr2.dir/main2.c.i
 
-CMakeFiles/pr2.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/pr2.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/katia/2sem/pr2/main.c -o CMakeFiles/pr2.dir/main.c.s
+CMakeFiles/pr2.dir/main2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/pr2.dir/main2.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/katia/2sem/pr2/main2.c -o CMakeFiles/pr2.dir/main2.c.s
 
 CMakeFiles/pr2.dir/users.c.o: CMakeFiles/pr2.dir/flags.make
 CMakeFiles/pr2.dir/users.c.o: /home/katia/2sem/pr2/users.c
@@ -155,7 +155,7 @@ CMakeFiles/pr2.dir/errors_PATH.c.s: cmake_force
 
 # Object files for target pr2
 pr2_OBJECTS = \
-"CMakeFiles/pr2.dir/main.c.o" \
+"CMakeFiles/pr2.dir/main2.c.o" \
 "CMakeFiles/pr2.dir/users.c.o" \
 "CMakeFiles/pr2.dir/processes.c.o" \
 "CMakeFiles/pr2.dir/help.c.o" \
@@ -165,7 +165,7 @@ pr2_OBJECTS = \
 # External object files for target pr2
 pr2_EXTERNAL_OBJECTS =
 
-pr2: CMakeFiles/pr2.dir/main.c.o
+pr2: CMakeFiles/pr2.dir/main2.c.o
 pr2: CMakeFiles/pr2.dir/users.c.o
 pr2: CMakeFiles/pr2.dir/processes.c.o
 pr2: CMakeFiles/pr2.dir/help.c.o

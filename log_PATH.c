@@ -5,6 +5,10 @@
 #include <stdlib.h>
 
 void function_log(const char *path) {
+   if (path == NULL) {
+        perror("Ошибка расположения файла для вывода");
+       return;
+    }
     FILE *file = fopen(path, "w");
    if (file == NULL) {
         perror("Ошибка открытия файла для вывода");

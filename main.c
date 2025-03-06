@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <getopt.h>
 #include "users.h"
 #include "processes.h"
 #include "help.h"
 #include "log_PATH.h"
 #include "errors_PATH.h"
 
-
+/*
 int main(int argc, char *argv[]) {
     int option;
     char *log_path = NULL, *error_path = NULL;
@@ -48,63 +49,74 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
+*/
 
-/*
 
-int main(int argc, char *argv[]) {
-    int option;
+
+static int flag[4];
+
+static char *short_option = "uph:l:e:";
+
+static struct option long_options[] = {
+    {"users",     no_argument,       &flag[0],  'u' },
+    {"processes",  required_argument, &flag[1], 'p' },
+    {"help",  no_argument, &flag[2], 'h'},
+    {"log",  required_argument, &flag[2], 'l'},
+    {"errors",  required_argument, &flag[2], 'e'},    
+    {0,         0,                 0,         0 }
+};
+
+int main(int argc, char **argv) {
+    int opt, i;
     char *log_path = NULL, *error_path = NULL;
 
-    // Определение длинных аргументов
-    static struct option long_options[] = {
-        {"users", no_argument, NULL, 'u'},
-        {"processes", no_argument, NULL, 'p'},
-        {"help", no_argument, NULL, 'h'},
-        {"log", required_argument, NULL, 'l'},
-        {"errors", required_argument, NULL, 'e'},
-        {NULL, 0, NULL, 0} // Завершающий элемент
-    };
-
     while (1) {
-        // Используем getopt_long для обработки аргументов
         int option_index = 0;
-        option = getopt_long(argc, argv, "uph l:e:", long_options, &option_index);
 
-        // Проверяем, если все аргументы обработаны
-        if (option == -1) {
+        opt = getopt_long(argc, argv, short_option,
+                          long_options, &option_index);
+        if (opt == -1)
             break;
-        }
 
-        switch (option) {
-            case 'u':
-                function_users();
-                return 0;
-            case 'p':
-                function_processes();
-                return 0;
-            case 'h':
-                function_help();
-                return 0;
+        switch (opt) {
+        case 0: /* for long option */
+            printf("option %s", long_options[option_index].name);
+            if (optarg)
+                printf(" with arg '%s'", optarg);
+            printf("\n");
+            break;
+	case 'u':
+            function_users();
+            break;
+               
+        case 'p':
+            function_processes();
+            break;
+                
+        case 'h':
+            function_help();
+                exit(0);
             case 'l':
                 log_path = optarg;
                 function_log(log_path);
-                return 0;
+                break;
             case 'e':
                 error_path = optarg;
                 function_errors(error_path);
-                return 0;
+                break;
             default:
                 function_help();
-                exit(1);
+                exit(1);	
         }
     }
 
-    // Если не были переданы аргументы
-    if (optind == 1) {
-        function_help();
+    while (optind < argc) {
+        printf("\tanother argument:%s\n", argv[optind++]);
+    }
+
+    for (i=0; i<5; i++) {
+        printf("flag[%d] = %d\n", i, flag[i]);
     }
 
     return 0;
 }
-*/
-

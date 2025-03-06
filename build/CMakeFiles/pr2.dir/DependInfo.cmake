@@ -11,7 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/katia/2sem/pr2/errors_PATH.c" "CMakeFiles/pr2.dir/errors_PATH.c.o" "gcc" "CMakeFiles/pr2.dir/errors_PATH.c.o.d"
   "/home/katia/2sem/pr2/help.c" "CMakeFiles/pr2.dir/help.c.o" "gcc" "CMakeFiles/pr2.dir/help.c.o.d"
   "/home/katia/2sem/pr2/log_PATH.c" "CMakeFiles/pr2.dir/log_PATH.c.o" "gcc" "CMakeFiles/pr2.dir/log_PATH.c.o.d"
-  "/home/katia/2sem/pr2/main.c" "CMakeFiles/pr2.dir/main.c.o" "gcc" "CMakeFiles/pr2.dir/main.c.o.d"
+  "/home/katia/2sem/pr2/main2.c" "CMakeFiles/pr2.dir/main2.c.o" "gcc" "CMakeFiles/pr2.dir/main2.c.o.d"
   "/home/katia/2sem/pr2/processes.c" "CMakeFiles/pr2.dir/processes.c.o" "gcc" "CMakeFiles/pr2.dir/processes.c.o.d"
   "/home/katia/2sem/pr2/users.c" "CMakeFiles/pr2.dir/users.c.o" "gcc" "CMakeFiles/pr2.dir/users.c.o.d"
   )

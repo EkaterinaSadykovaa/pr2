@@ -11,6 +11,10 @@ void function_errors(const char *path) {
        perror("Ошибка открытия файла для ошибок");
       return;
     }
+    if (path == NULL) {
+       perror("Не указан файл для ошибок");
+      return;
+    }
     stderr = file;
 }
 
