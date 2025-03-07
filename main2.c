@@ -11,7 +11,6 @@
 
 int main(int argc, char *argv[]) {
     int option;
-    int users_flag = 0, processes_flag = 0;
 
     struct option long_options[] = {
         {"users", no_argument, NULL, 'u'},
