@@ -18,10 +18,8 @@ void function_users() {
     }
     endpwent();
 
-    // Сортировка пользователя по алфавиту
     qsort(user_list, count, sizeof(char*), (int(*)(const void*, const void*)) strcmp);
 
-    // Вывод результатов
     for (int i = 0; i < count; i++) {
         printf("Пользователь: %s, Домашняя директория: %s\n", user_list[i], getpwuid(getuid())->pw_dir);
         free(user_list[i]);

@@ -18,7 +18,7 @@ void function_processes() {
     printf("%-6s %s\n", "PID", "Command");
 
     while ((entry = readdir(dp)) != NULL) {
-        if (isdigit(entry->d_name[0])) { // Проверяем, что это числовая директория(в каталоге /proc в Linux каждое имя подкаталога соответствует PID (идентификатору процесса), который всегда начинается с цифры. )
+        if (isdigit(entry->d_name[0])) { 
             int pid = atoi(entry->d_name);
             char cmdline[256];
             snprintf(cmdline, sizeof(cmdline), "/proc/%d/cmdline", pid);
