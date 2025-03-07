@@ -7,16 +7,7 @@
 #include "help.h"
 #include "log_PATH.h"
 #include "errors_PATH.h"
-/*
-void print_help() {
-    printf("Использование: myutil [Настройки]\n");
-    printf("  -u, --users        Показывает список пользователей\n");
-    printf("  -p, --processes    Показывает процессы\n");
-    printf("  -h, --help         Вывод справки\n");
-    printf("  -l, --log PATH     Запись в лог PATH\n");
-    printf("  -e, --errors PATH  Ошибки при записи в лог PATH\n");
-}
-*/
+
 
 int main(int argc, char *argv[]) {
     int option;
@@ -35,34 +26,19 @@ int main(int argc, char *argv[]) {
         switch (option) {
             case 'u':
             	function_users();
-                //users_flag = 1;
                 break;
             case 'p':
             	function_processes();
-                //processes_flag = 1;
                 break;
             case 'h':
             	function_help();
-                //print_help();
                 return 0;
             case 'l':
                 function_log(optarg);
-                /*
-                if (!log_file) {
-                
-                    fprintf(stderr, "Ошибка: Недоступна запись в лог: %s\n", optarg);
-                    return 1;
-                 
-                }*/
+               
                 break;
             case 'e':
             	function_errors(optarg);
-            /*
-                error_file=fopen(optarg, "w");
-                if (!error_file) {
-                    fprintf(stderr, "Ошибка: Невозможно записать ошибки в лог: %s\n", optarg);
-                    return 1;
-                }*/
                 break;
             default:
                 function_help();
@@ -70,11 +46,6 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    //if (users_flag) list_users();
-    //if (processes_flag) list_processes();
-
-    //if (log_file) fclose(log_file);
-    //if (error_file) fclose(error_file);
 
     return 0;
 }
