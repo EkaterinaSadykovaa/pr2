@@ -8,7 +8,7 @@ myutil
 *.a
 *.so
 *.log
-*.txt
+//*.txt
 *.swp
 *.bak
 *.out
